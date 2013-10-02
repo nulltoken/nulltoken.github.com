@@ -27,7 +27,7 @@
 #imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
 #imageData #bottomNavClose{ width: 141px; float: right;  padding-bottom: 0.7em; outline: none;}	 	
 
-#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #9ab7c3; }
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #FCFCFC; }
 
 /****************
  * Fonts
@@ -58,17 +58,101 @@
 	}
 	
 	@font-face	{
-		font-family: HelveticaNeueLTPro-BlkIt;
-		src: url('fonts/HelveticaNeueLTPro-BlkIt.otf');
+		font-family: HelveticaNeueLTPro-HvIt;
+		src: url('fonts/HelveticaNeueLTPro-HvIt.otf');
+	}
+	
+	@font-face	{
+		font-family: HelveticaNeueLTPro-Hv;
+		src: url('fonts/HelveticaNeueLTPro-Hv.otf');
+	}
+	
+	@font-face	{
+		font-family: HelveticaNeueLTPro-Lt;
+		src: url('fonts/HelveticaNeueLTPro-Lt.otf');
+	}
+	
+	@font-face	{
+		font-family: HelveticaNeueLTPro-Md;
+		src: url('fonts/HelveticaNeueLTPro-Md.otf');
+	}
+	
+	@font-face	{
+		font-family: HelveticaNeueLTPro-MdIt;
+		src: url('fonts/HelveticaNeueLTPro-MdIt.otf');
 	}
 
 /************************************************************************************
  * Page temporaire
  ************************************************************************************/
+ 
+ 
+	
+	div.calqueTemp	{
+		width:100%;
+		height:2040px;
+		/*background-image:url(images/alert-band.png);*/
+		background-image:url(images/oo-blanc.png); 
+		background-position: top; 
+		background-repeat:no-repeat;
+		background-position: 50% 0%;
+		z-index:50;
+		position:absolute;
+		background-color:#F60;
+		top:0px;
+		opacity:0.92;
+		z-index:100;
+		padding-top:150px;
+	}
+	
+	p.avertissement	{
+		font-family: HelveticaNeueLTPro-Lt, Helvetica, Arial, sans-serif;
+		/*font-weight:bold;*/
+		color:#000;
+		text-transform:uppercase;
+		font-size:11px;
+		letter-spacing:0px;
+		right:0px;
+		margin-top:50px;
+		margin-left:-10px;
+		margin-right:110px;
+		padding-left:50px;
+		padding-right:350px;
+		float:right;
+	}
+	
+	a.avertissement	{
+		font-family: Helvetica, Arial, sans-serif;
+/*		font-weight:bold;
+*/		color: #FFF;
+		text-transform:uppercase;
+		font-size:11px;
+		letter-spacing:0px;
+		text-decoration:none;
+		display:block;
+		border: solid;
+		border-width:1px;
+		size: 1pt;
+		border-color:#FFF;
+		padding:2px;
+		width:140px;
+		float:left;
+	}
+	
+	ul.avertissement	{
+		font-family: Helvetica, Arial, sans-serif;
+		/*font-weight:bold;*/
+		color: #000;
+		text-transform:uppercase;
+		font-size:11px;
+		letter-spacing:0px;
+		text-decoration:none;
+		padding-left:70px;
+	}
 	
 	div.backpage  {
 		width:100%;
-		background-image:url(images/annonce-fond.jpg);
+		background-image:url(images/bg-homme-temp.jpg);
 		background-position:top;
 		background-color:#F60;
 		visibility:visible;
@@ -79,7 +163,7 @@
 	}
 	
 	div.header1  {
-		max-width:1024px;
+		width:1024px;
 		height:160px;
 		visibility:visible;
 		position: relative;
@@ -92,66 +176,15 @@
 	div.onglets  {
 		width:100%;
 		visibility:visible;
-		position: relative;
+		position: absolute;
 		bottom:-3px;
 		left:0px;
-		z-index:10;
-	}
-	
-	div.annonce-page  {
-		visibility:visible;
-		position: relative;
-		top:0px;
-		margin-left:auto;
-		margin-right:auto;
-		z-index:1;
-		max-width:1024px;
-		top:130px;
-	}
-		
-	p.annonce-slogan	{
-		font-family: HelveticaNeueLTPro-BlkIt, Helvetica, Arial, sans-serif;
-		font-size: 40pt;
-		color:#FFF;
-		line-height: 36pt;
-		text-transform:uppercase;
-		letter-spacing:-3px;
-		margin-top: 40px;
-		margin-bottom: 0px;
-		
-	}
-		
-	p.annonce-accroche	{
-		font-family: HelveticaNeueLTPro-BlkIt, Helvetica, Arial, sans-serif;
-		font-size: 20pt;
-		color:#000;
-		line-height: 18pt;
-		text-transform:uppercase;
-		letter-spacing:-1px;
-		margin-bottom: 0px;
-		margin-top: 10px;
-		
-	}
-		
-	p.annonce-txt	{
-		font-family: Helvetica, Arial, sans-serif;
-		font-size: 13pt;
-		color:#000;
-		line-height: 15pt;
-		text-transform:uppercase;
-		letter-spacing:0px;
-		margin-top: 10px;
-		margin-bottom: 0px;
-		font-weight:bold;
-		
+		top:122px;
+		z-index:15;
 	}
 	
 	div.page  {
 		background-color:#FFF;
-		background-image:url(images/illustration-home.jpg);
-		background-position:bottom right;
-		
-		background-repeat:no-repeat;
 		visibility:visible;
 		position: relative;
 		top:0px;
@@ -159,10 +192,11 @@
 		margin-right:auto;
 		z-index:1;
 		border:thin;
-		max-width:1024px;
+		width:1024px;
+		padding-bottom:30px;
 	}
 	
-	div.page2  {
+/*	div.page2  {
 		background-color:#FFF;
 		visibility:visible;
 		position: relative;
@@ -172,10 +206,11 @@
 		z-index:1;
 		border:thin;
 		max-width:1024px;
-	}
+	}*/
 	
 	div.edito  {
 		max-width:725px;
+		max-height:inherit;
 		visibility:visible;
 		position: relative;
 		top:0px;
@@ -184,7 +219,7 @@
 	}
 	
 	p.edito-titre	{
-		font-family: HelveticaNeueLTPro-Th, arial, helvetica, sans-serif;
+		font-family: HelveticaNeueLTPro-Th, helvetica, arial, sans-serif;
 		font-size:24pt;
 		color:#333;
 		margin-left:20px;
@@ -196,8 +231,33 @@
 		letter-spacing:0px;
 	}
 	
+	p.edito-titre2	{
+		font-family: HelveticaNeueLTPro-Md, helvetica, arial, sans-serif;
+		font-size:14pt;
+		color:#000;
+		margin-left:40px;
+		margin-top:20px;
+		margin-right:50px;
+		margin-bottom:0px;
+		text-transform:uppercase;
+		line-height:18pt;
+		letter-spacing:0px;
+	}
+	
+	p.edito-titre3	{
+		font-family: HelveticaNeueLTPro-Hv, helvetica, arial, sans-serif;
+		font-size:12pt;
+		color:#000;
+		margin-left:40px;
+		margin-top:20px;
+		margin-right:50px;
+		margin-bottom:0px;
+		line-height:15pt;
+		letter-spacing:0px;
+	}
+	
 	p.edito-txt	{
-		font-family: HelveticaNeueLTPro-Th, arial, helvetica, sans-serif;
+		font-family: HelveticaNeueLTPro-Lt, helvetica, arial, sans-serif;
 		font-size:12pt;
 		color:#666;
 		margin-left:40px;
@@ -206,13 +266,24 @@
 		line-height:14pt;
 	}
 	
+	p.edito-txt2	{
+		font-family: HelveticaNeueLTPro-Lt, helvetica, arial, sans-serif;
+		font-size:12pt;
+		color:#666;
+		margin-left:40px;
+		margin-top:20px;
+		margin-right:80px;
+		line-height:14pt;
+		display:none;
+	}
+	
 	p.exergue	{
 		font-family: Helvetica, Arial, sans-serif;
 		width:120px;
 		background-color:#F60;
 		font-size:11pt;
 		color:#FFF;
-		margin-top:39px;
+		margin-top:330px;
 		float:right;
 		text-align:left;
 		padding:30px;
@@ -224,39 +295,62 @@
 		font-weight:bold;
 	}
 	
+	span.exergue	{
+		font-family: Helvetica, Arial, sans-serif;
+		width:120px;
+		background-color:#F60;
+		font-size:11pt;
+		color:#FFF;
+		margin-top:0px;
+		float:right;
+		text-align:left;
+		padding:30px;
+		padding-left:40px;
+		margin-right:10px;
+		margin-left:-40px;
+		line-height:12pt;
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+	
 	div.ecoles  {
 		width:675px;
 		visibility:visible;
 		position: relative;
 		top:0px;
 		z-index:10;
-		padding-bottom:20px;
-	}
-	
-	table.groupescoles  {
-		top:0px;
-		width:100%;
-		margin-left:15px;
-		margin-top:0px;
-		padding-bottom:20px;
-		margin-right:50px;
-		border:1px;
-	}
-	
-	td.groupescoles  {
-		valign:top;
+		padding-bottom:80px;
+		padding-left:20px;
+		overflow:hidden;
+		background-image:url(images/lesEcoles-picto.png);
+		background-position: top left;
+		background-repeat:no-repeat;
 	}
 	
 	div.groupecole  {
 		width:135px;
+		height:190px;
 		visibility:visible;
 		position: relative;
-		top:0px;
+		top:80px;
 		z-index:10;
-		margin-left:50px;
-		margin-top:20px;
+		margin-left:20px;
+		margin-top:30px;
 		padding-bottom:20px;
-		border:1px;
+		border:0px;
+		float:left;
+		background-color:#F9F9F9;
+		display:inline-block;
+	}
+	
+	div.work	{
+		visibility:visible;
+		position:relative;
+		width:675px;
+		margin-top:30px;
+		margin-left:40px;
+		margin-bottom:80px;
+		z-index:10;
 	}
 	
 	p.ecolenom	{
@@ -293,24 +387,12 @@
 	}
 	
 	div.dossiers  {
-		max-width:625px;
+		max-width:670px;
 		visibility:visible;
 		position: relative;
 		top:0px;
 		z-index:10;
-		margin-top:-30px;
-		padding-bottom:0px;
-	}
-	
-	div.footer  {
-		max-width:1024px;
-		height:200px;
-		background-color:#F90;
-		visibility:visible;
-		position: relative;
-		top:30px;
-		z-index:10;
-		margin-top:-30px;
+		margin-top:-10px;
 		padding-bottom:0px;
 	}
 	
@@ -368,6 +450,89 @@
 		line-height:11pt;
 	}
 	
+	div.stage  {
+		width:330px;
+		background-image:url(images/2012-09-18-SOS-STAGE-Info.jpg);
+		background-repeat:no-repeat;
+		background-color: #445;
+		visibility:visible;
+		position: absolute;
+		top:780px;
+		right:0px;
+		margin-left:20px;
+		padding-bottom:10px;
+		padding-top:160px;
+		z-index:20;
+	}
+	
+	p.stage-txt	{
+		font-family:  HelveticaNeueLTPro-Lt, Helvetica, Arial, sans-serif;
+		font-size:8pt;
+		color:#CCC;
+		margin-left:30px;
+		margin-right:20px;
+		line-height:9pt;
+		letter-spacing:1px;
+		text-transform:uppercase;
+	}
+	
+	div.footer  {
+		width:1024px;
+		height:230px;
+		background-color:#F90;
+		visibility:visible;
+		position: relative;
+		z-index:10;
+		margin-top:0px;
+		margin-left:auto;
+		margin-right:auto;
+		border-color:#F90;
+		overflow:hidden;
+		padding-bottom:50px;
+	}
+	
+	table.sitemap	{
+		margin-top:-60px;
+		width:1024px;
+		padding: 30px;
+	}
+	
+	td.sitemap	{
+		vertical-align:top;
+		width:170px;
+		display:inline-bloc;
+	}
+	
+	p.sitemap-title1	{
+		font-family: HelveticaNeueLTPro-Th, helvetica, arial, sans-serif;
+		font-size:18pt;
+		color:#C60;
+		line-height:18pt;
+		letter-spacing:1px;
+		margin:30px;
+	}
+	
+	p.sitemap-title2	{
+		font-family: HelveticaNeueLTPro-Md, helvetica, arial, sans-serif;
+		font-size:10pt;
+		color:#C60;
+		text-transform:uppercase;
+		line-height:12pt;
+		letter-spacing:0px;
+		margin-bottom:0px;
+	}
+	
+	p.sitemap-txt	{
+		font-family: HelveticaNeueLTPro-Md, helvetica, arial, sans-serif;
+		font-size:7pt;
+		color: #C60;
+		text-transform:uppercase;
+		line-height:14pt;
+		letter-spacing:0px;
+		margin-left:5px;
+		margin-top:7px;
+	}
+	
 	span.txt-orange		{
 		color:#F60;
 	}
@@ -388,7 +553,9 @@
 	a.lirePlus		{
 		color:#39F;
 		text-decoration:none;
-		font-size:9pt;
+		font-size:12pt;
+		display:inline-block;
+		margin-top:20px;
 	}
 	
 	
@@ -397,7 +564,7 @@
 		color:#39F;
 		text-decoration: underline;
 		border:0;
-		font-size:9pt;
+		font-size:12pt;
 	}
 	
 	div.illustr  {
@@ -407,5 +574,29 @@
 		bottom:0px;
 		right:0px;
 		z-index:5;
-		padding-bottom:20px;
+		padding-bottom:0px;
+	}
+	
+	div.vignette  {
+		width:142px;
+		height:220px;
+		visibility:visible;
+		position: relative;
+		z-index:10;
+		margin-left:20px;
+		margin-right:-30px;
+		padding:20px;
+		display:inline-block;
+		margin-top:0px;
+		float:left;
+	}
+	
+	img.vignettes	{
+		height: 200px;
+	}
+	
+	p.vignette-txt	{
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:8pt;
+		color:#666;
 	}
